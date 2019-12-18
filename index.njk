@@ -1,0 +1,15 @@
+---
+layout: layouts/base.njk
+tags:
+  - home
+navtitle: Home
+pagination:
+  data: collections.posts
+  size: 10
+  reverse: true
+  alias: posts_list
+permalink: "{% if pagination.pageNumber > 0 %}page/{{ pagination.pageNumber + 1 }}/{% else %}/{% endif %}"
+body_class: home-template
+---
+
+{% include "loop.njk" %}

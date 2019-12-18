@@ -1,0 +1,103 @@
+/* ==========================================================================
+    General - Setting up some base styles
+========================================================================== */
+
+html {
+    height: 100%;
+    max-height: 100%;
+}
+
+body {
+    height: 100%;
+    max-height: 100%;
+    font-family: "Merriweather", serif;
+    letter-spacing: 0.01rem;
+    color: #3A4145;
+    text-rendering: geometricPrecision;
+}
+
+::-moz-selection {
+    background: #D6EDFF;
+}
+
+::selection {
+    background: #D6EDFF;
+}
+
+h1, h2, h3,
+h4, h5, h6 {
+    color: #2E2E2E;
+    line-height: 1.15em;
+    margin: 1.5rem 0;
+    font-family: "Open Sans", sans-serif;
+    text-rendering: geometricPrecision;
+}
+
+h1 {
+    font-size: 3rem;
+    letter-spacing: -2px;
+    text-indent: -3px;
+}
+
+h2 {
+    font-size: 2.5rem;
+    letter-spacing: -1px;
+}
+
+h3 {
+    font-size: 2rem;
+}
+
+h4 {
+    font-size: 1.5rem;
+}
+
+h5 {
+    font-size: 1rem;
+}
+
+h6 {
+    font-size: 1rem;
+}
+
+ul, ol {
+    line-height: 2rem;
+}
+
+a.non-highlighted {
+    color: #4A4A4A;
+    transition: color 0.3s ease;
+}
+
+a.non-highlighted:hover {
+    color: #111;
+}
+
+iframe, .fluid-width-video-wrapper {
+    display: block;
+    margin: 1.75em 0;
+}
+
+/* When a video is inside the fitvids wrapper, drop the
+margin on the iframe, cause it breaks stuff. */
+.fluid-width-video-wrapper iframe {
+    margin: 0;
+}
+
+/* Direct Links / Markdown Headers */
+.direct-link {
+    font-family: sans-serif;
+    text-decoration: none;
+    font-style: normal;
+    margin-left: .1em;
+  }
+  a[href].direct-link,
+  a[href].direct-link:visited {
+    color: transparent;
+  }
+  a[href].direct-link:focus,
+  a[href].direct-link:focus:visited,
+  :hover > a[href].direct-link,
+  :hover > a[href].direct-link:visited {
+    color: #aaa;
+  }

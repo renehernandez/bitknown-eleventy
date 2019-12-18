@@ -1,0 +1,45 @@
+---
+layout: layouts/base.njk
+body_class: post-template
+---
+
+<article class="post">
+  <header class="row post-header">
+    <div class="col-12">
+      <div class="row">
+        <div class="col-12">
+          <h1 class="post-title">{{ title }}</h1>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-12 mb-2">
+          {% include "tags_loop.njk" %}
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-12 mb-2">
+          <time class="post-date">
+            Posted {{ date | readableDate }}
+          </time>
+        </div>
+      </div>
+    </div>
+  </header>
+  
+  <section class="row post-content">
+    <div class="col-12">
+      {{ content | safe }}
+    </div>
+  </section>
+</article>
+
+<section class="row">
+  <div class="col-12">
+    <p>
+      <strong>Disclaimer:</strong>
+      The opinions expressed herein are my own personal opinions and do not represent my employer’s view in any way. 
+    </p>
+  </div>
+</section>

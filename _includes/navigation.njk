@@ -1,0 +1,25 @@
+<ul class="nav flex-column">
+    {%- for nav in collections.home -%}
+        <li class="nav-item">
+            <a class="nav-link {% if nav.url == page.url %} active {% endif %}" href="{{ nav.url | url }}">
+                {{ nav.data.navtitle }}
+            </a>
+        </li>
+    {%- endfor -%}
+
+    {%- for nav in collections.nav -%}
+        <li class="nav-item">
+            <a class="nav-link {% if nav.url == page.url %} active {% endif %}" href="{{ nav.url | url }}">
+                {{ nav.data.navtitle }}
+            </a>
+        </li>
+    {%- endfor -%}
+
+    {%- for nav in collections.feed -%}
+        <li class="nav-item">
+            <a class="nav-link {% if nav.url == page.url %} active {% endif %}" href="{{ nav.url | url }}">
+                {{ nav.data.navtitle }}
+            </a>
+        </li>
+    {%- endfor -%}
+</ul>

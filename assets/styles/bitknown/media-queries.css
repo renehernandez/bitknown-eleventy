@@ -1,0 +1,221 @@
+/* ==========================================================================
+    Media Queries - Smaller than 900px
+========================================================================== */
+
+   @media only screen and (max-width: 992px) {
+
+    blockquote {
+        margin-left: 0;
+    }
+
+    body:not(.post-template) .post-title {
+        font-size: 3.2rem;
+    }
+
+    ol, ul {
+        padding-left: 2em;
+    }
+
+    h1 {
+        font-size: 4.5rem;
+        text-indent: -2px;
+    }
+
+    h2 {
+        font-size: 3.6rem;
+    }
+
+    h3 {
+        font-size: 3.1rem;
+    }
+
+    h4 {
+        font-size: 2.5rem;
+    }
+
+    h5 {
+        font-size: 2.2rem;
+    }
+
+    h6 {
+        font-size: 1.8rem;
+    }
+
+    .author-profile {
+        padding-bottom: 4rem;
+    }
+
+    .author-profile .author-bio {
+        font-size: 1.6rem;
+    }
+
+    .author-meta span {
+        display: block;
+        margin: 1.5rem 0;
+    }
+    .author-profile .author-meta span {
+        font-size: 1.6rem;
+    }
+}
+
+
+/* ==========================================================================
+   12. Media Queries - Smaller than 576px
+   ========================================================================== */
+
+   @media only screen and (max-width: 576px) {
+
+    .menu-button {
+        padding: 0 5px;
+        border-radius: 0;
+        border-width: 0;
+        color: #2e2e2e;
+        background: transparent;
+    }
+    .menu-button:hover {
+        color: #2e2e2e;
+        border-color: transparent;
+        background: none;
+    }
+    body.nav-opened .menu-button {
+        background: none;
+        border: transparent;
+    }
+
+    .main-nav.overlay a:hover {
+        color: #fff;
+        border-color: transparent;
+        background: transparent;
+    }
+
+    .no-cover .main-nav.overlay {
+        background: none;
+    }
+    .no-cover .main-nav.overlay .menu-button {
+        border: none;
+    }
+
+    .main-nav.overlay .menu-button {
+        border-color: transparent;
+    }
+
+    .nav-title {
+        top: 25px;
+
+    }
+
+    .nav-close {
+        position: absolute;
+        top: 18px;
+    }
+
+    .nav ul {
+        padding: 60px 9% 5%;
+    }
+
+    .inner,
+    .pagination {
+        width: auto;
+        margin: 2rem auto;
+    }
+
+    .post {
+        width: auto;
+        margin-top: 1rem;
+        margin-bottom: 2rem;
+        margin-left: 1rem;
+        margin-right: 1rem;
+        line-height: 1.65em;
+    }
+
+    .post-template .post-header {
+        margin-bottom: 2rem;
+    }
+
+    p, ul, ol, dl {
+        font-size: 0.95em;
+        margin: 0 0 2.5rem 0;
+    }
+
+    h1, h2, h3,
+    h4, h5, h6 {
+        margin: 0 0 0.3em 0;
+    }
+
+    h1 {
+        font-size: 2.8rem;
+        letter-spacing: -1px;
+    }
+
+    h2 {
+        font-size: 2.4rem;
+        letter-spacing: 0;
+    }
+
+    h3 {
+        font-size: 2.1rem;
+    }
+
+    h4 {
+        font-size: 1.9rem;
+    }
+
+    h5 {
+        font-size: 1.8rem;
+    }
+
+    h6 {
+        font-size: 1.8rem;
+    }
+
+    body:not(.post-template) .post-title {
+        font-size: 2.5rem;
+    }
+
+    .post-template .site-footer {
+        margin-top: 0;
+    }
+
+    .post-content img {
+        padding: 0;
+        width: calc(100%); /* expand with to image + margins */
+        min-width: 0;
+    }
+
+    .post-footer {
+        padding: 5rem 0 3rem 0;
+        text-align: center;
+    }
+
+    .post-footer .author {
+        margin: 0 0 2rem 0;
+        padding: 0 0 1.6rem 0;
+        border-bottom: #EBF2F6 1px dashed;
+    }
+
+    .author-meta li {
+        float: none;
+        margin: 0;
+        line-height: 1.75em;
+    }
+
+    .author-meta li:before {
+        display: none;
+    }
+
+    .site-footer {
+        margin-top: 3rem;
+    }
+
+    .author-profile {
+        padding-bottom: 2rem;
+    }
+
+    .author-profile .author-image {
+        margin-top: -70px;
+    }
+
+    .author-profile .author-meta span {
+        font-size: 1.4rem;
+    }
+}

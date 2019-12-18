@@ -1,0 +1,53 @@
+{% for post in posts_list %}
+    <article class="post">
+        <header class="post-header row">
+            <div class="col">
+                <h2 class="post-title"><a class="non-highlighted" href="{{ post.url | url }}">{{ post.data.title }}</a></h2>
+            </div>
+        </header>
+        <section class="post-excerpt row">
+            <div class="col">
+                <p>
+                    {{ post.data.excerpt | safe }} 
+                    <a class="non-highlighted read-more" href="{{ post.url | url }}">&raquo;</a>
+                </p>
+            </div>
+        </section>
+        <footer class="post-meta">
+            <div class="d-none d-sm-inline row">
+                <div class="col-auto d-inline border-right border-secondary">
+                    {% set tags = post.data.tags %}
+                    {% include "tags_loop.njk" %}
+                </div>
+                <div class="col-auto d-inline border-right border-secondary">
+                    <time class="post-date" 
+                        datetime="{{ post.date | readableDate }}">
+                        {{ post.date | readableDate }}</time>
+                </div>
+                <div class="col-auto d-inline">
+                    <span class="reading-time">{{ post.templateContent | readingTime }}</span>
+                </div>
+            </div>
+            <div class="d-sm-none">
+                 <div class="row justify-content-center mb-1">
+                    <div class="col-auto">
+                        {% set tags = post.data.tags %}
+                        {% include "tags_loop.njk" %}
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-auto d-inline border-right border-secondary">
+                        <time class="post-date" 
+                            datetime="{{ post.date | readableDate }}">
+                            {{ post.date | readableDate }}</time>
+                    </div>
+                    <div class="col-auto d-inline">
+                        <span class="reading-time">{{ post.templateContent | readingTime }}</span>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </article>
+{% endfor %}
+
+{% include "pagination.njk" %}

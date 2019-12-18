@@ -1,0 +1,28 @@
+---
+pagination:
+  data: collections
+  size: 1
+  alias: tag
+  filter:
+    - all
+    - nav
+    - post
+    - posts
+    - tagList
+  addAllPagesToCollections: true
+layout: layouts/base.njk
+renderData:
+  title: "{{ tag }}"
+permalink: /tags/{{ tag }}/
+---
+
+{% set posts_list = collections[ tag ]  | reverse %}
+
+<section class="tag-header">
+    <h1>{{tag.name}}</h1>
+    <h2>
+        A  {{ posts_list.length }}-post collection
+    </h2>
+</section>
+
+{% include "loop.njk" %}

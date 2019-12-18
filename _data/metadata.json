@@ -1,0 +1,15 @@
+{
+  "title": "Bits of Knowledge",
+  "url": "https://bitsofknowledge.net",
+  "description": "Thoughts on Programming and DevOps",
+  "feed": {
+    "subtitle": "Thoughts on Programming and DevOps",
+    "filename": "feed.xml",
+    "path": "/feed.xml",
+    "url": "https://bitsofknowledge.net/feed.xml",
+    "id": "https://bitsofknowledge.net/"
+  },
+  "author": {
+    "name": "Rene Hernandez"
+  }
+}

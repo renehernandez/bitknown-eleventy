@@ -1,0 +1,14 @@
+{% if tags %}
+    {% if "development" in tags %}
+        <span title="development" class="badge badge-primary">development</span>
+    {% else %}
+        {% for tag in tags %}
+            {% if tag != "posts" %}
+            {% set tagUrl %} /tags/{{ tag }}/ {% endset %}
+            <a href="{{ tagUrl | url }}" title="{{ tag }}">
+                <span class="badge badge-secondary">{{ tag }}</span>
+            </a>
+            {% endif %}
+        {% endfor %}
+    {% endif %}
+{% endif %}
