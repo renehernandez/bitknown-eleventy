@@ -35,12 +35,16 @@ module.exports = function(eleventyConfig) {
 
   eleventyConfig.addCollection("tagList", require("./_11ty/getTagList"));
 
+  eleventyConfig.addCollection("postsList", (collections) => {
+    return collections.posts == undefined ? [] : collections.posts;
+  });
+
   eleventyConfig.addFilter("sortByPostsCount", (tags, collections) => {
     return Array.from(tags).sort(function(tag1, tag2) {
       return collections[tag1].length - collections[tag2].length;
     });
   });
-  
+
   eleventyConfig.addPassthroughCopy("assets");
 
   /* Markdown Plugins */

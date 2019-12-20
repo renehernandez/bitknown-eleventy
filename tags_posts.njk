@@ -9,6 +9,9 @@ pagination:
     - post
     - posts
     - tagList
+    - feed
+    - home
+    - postsList
   addAllPagesToCollections: true
 layout: layouts/base.njk
 renderData:
@@ -21,7 +24,7 @@ permalink: /tags/{{ tag }}/
 <section class="tag-header">
     <h1>{{tag.name}}</h1>
     <h2>
-        A  {{ posts_list.length }}-post collection
+        A  {{ posts_list | length }}-post collection
     </h2>
 </section>
 
